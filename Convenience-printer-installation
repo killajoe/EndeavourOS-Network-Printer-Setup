@@ -1,6 +1,6 @@
 #!/bin/bash
 systemctl enable cups-browsed.service
 wget -qN --show-progress -P "/etc/" "https://raw.githubusercontent.com/killajoe/fileserver/main/nsswitch.conf"
-firewall-cmd --permanent --zone=public --add-service=mdns
-firewall-cmd --permanent --zone=public --add-service=ipp
-firewall-cmd --permanent --zone=public --add-service=ipp-client
+firewall-offline-cmd --permanent --zone=public --add-service=mdns
+firewall-offline-cmd --permanent --zone=public --add-service=ipp
+firewall-offline-cmd --permanent --zone=public --add-service=ipp-client
