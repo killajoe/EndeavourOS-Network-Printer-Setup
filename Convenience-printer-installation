@@ -1,6 +1,7 @@
 #!/bin/bash
 systemctl enable cups-browsed.service
 wget -qN --show-progress -P "/etc/" "https://raw.githubusercontent.com/killajoe/fileserver/main/nsswitch.conf"
-firewall-offline-cmd --permanent --zone=public --add-service=mdns
-firewall-offline-cmd --permanent --zone=public --add-service=ipp
-firewall-offline-cmd --permanent --zone=public --add-service=ipp-client
+wget -qN --show-progress -P "/usr/lib/firewalld/zones/" "https://raw.githubusercontent.com/killajoe/fileserver/main/home-printing.xml"
+#firewall-offline-cmd --permanent --zone=public --add-service=mdns
+#firewall-offline-cmd --permanent --zone=public --add-service=ipp
+#firewall-offline-cmd --permanent --zone=public --add-service=ipp-client
