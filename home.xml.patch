@@ -1,0 +1,18 @@
+--- home.xml	2023-06-14 22:12:41.000000000 +0200
++++ home-printing.xml.patched	2023-06-18 15:09:08.255869803 +0200
+@@ -1,10 +1,12 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <zone>
+-  <short>Home</short>
+-  <description>For use in home areas. You mostly trust the other computers on networks to not harm your computer. Only selected incoming connections are accepted.</description>
++  <short>home-printing</short>
++  <description>For use at home/work, network printing allowed. Only selected incoming connections are accepted.</description>
+   <service name="ssh"/>
++  <service name="dhcpv6-client"/>
++  <service name="ipp"/>
++  <service name="ipp-client"/>
+   <service name="mdns"/>
+   <service name="samba-client"/>
+-  <service name="dhcpv6-client"/>
+   <forward/>
+ </zone>
