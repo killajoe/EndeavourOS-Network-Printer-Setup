@@ -8,7 +8,7 @@ systemctl enable cups-browsed.service
 cp /usr/lib/firewalld/zones/home.xml /etc/firewalld/zones/
 cp /usr/lib/firewalld/zones/home.xml /etc/firewalld/zones/home.xml.old
 patch /etc/firewalld/zones/home.xml < home.xml.patch
-# enable home as degfault zone
+# enable home as default zone
 patch /etc/firewalld/firewalld.conf < firewalld.conf.patch
 # enable local hostname resolution
 patch /etc/nsswitch.conf < nsswitch.conf.patch
