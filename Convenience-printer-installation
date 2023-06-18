@@ -1,8 +1,27 @@
 #!/bin/bash
+git clone https://github.com/killajoe/fileserver.git
+cd fileserver
+
+## start script ##
 systemctl enable cups-browsed.service
-wget -qN --show-progress -P "/etc/" "https://raw.githubusercontent.com/killajoe/fileserver/main/nsswitch.conf"
-wget -qN --show-progress -P "/usr/lib/firewalld/zones/" "https://raw.githubusercontent.com/killajoe/fileserver/main/home-printing.xml"
-wget -qN --show-progress -P "/etc/firewalld/" "https://raw.githubusercontent.com/killajoe/fileserver/main/firewalld.conf"
+# creating a public zone dropin and backup
+cp /usr/lib/firewalld/zones/home.xml /etc/firewalld/zones/
+cp /usr/lib/firewalld/zones/home.xml /etc/firewalld/zones/home.xml.old
+patch /etc/firewalld/zones/home.xml < home.xml.patch
+# enable home as degfault zone
+patch /etc/firewalld/firewalld.conf < firewalld.conf.patch
+# enable local hostname resolution
+patch /etc/nsswitch.conf < nsswitch.conf.patch
+## end script ##
+
+# cleanup
+cd .. 
+rm -R fileserver
+
+# archived commands
+#wget -qN --show-progress -P "/etc/" "https://raw.githubusercontent.com/killajoe/fileserver/main/nsswitch.conf"
+#wget -qN --show-progress -P "/usr/lib/firewalld/zones/" "https://raw.githubusercontent.com/killajoe/fileserver/main/home-printing.xml"
+#wget -qN --show-progress -P "/etc/firewalld/" "https://raw.githubusercontent.com/killajoe/fileserver/main/firewalld.conf"
 #firewall-offline-cmd --permanent --zone=public --add-service=mdns
 #firewall-offline-cmd --permanent --zone=public --add-service=ipp
 #firewall-offline-cmd --permanent --zone=public --add-service=ipp-client
