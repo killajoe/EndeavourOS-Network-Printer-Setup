@@ -1,0 +1,11 @@
+--- nsswitch.conf	2023-06-18 15:15:08.113487212 +0200
++++ nsswitch.conf.patched	2023-06-18 15:12:53.111947973 +0200
+@@ -8,7 +8,7 @@
+ 
+ publickey: files
+ 
+-hosts: mymachines resolve [!UNAVAIL=return] files myhostname dns
++hosts: mymachines mdns_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] files myhostname dns
+ networks: files
+ 
+ protocols: files
