@@ -17,11 +17,3 @@ patch /etc/nsswitch.conf < nsswitch.conf.patch
 # cleanup
 cd .. 
 rm -R fileserver
-
-# archived commands
-#wget -qN --show-progress -P "/etc/" "https://raw.githubusercontent.com/killajoe/fileserver/main/nsswitch.conf"
-#wget -qN --show-progress -P "/usr/lib/firewalld/zones/" "https://raw.githubusercontent.com/killajoe/fileserver/main/home-printing.xml"
-#wget -qN --show-progress -P "/etc/firewalld/" "https://raw.githubusercontent.com/killajoe/fileserver/main/firewalld.conf"
-#firewall-offline-cmd --permanent --zone=public --add-service=mdns
-#firewall-offline-cmd --permanent --zone=public --add-service=ipp
-#firewall-offline-cmd --permanent --zone=public --add-service=ipp-client
