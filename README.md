@@ -9,3 +9,9 @@ currently working on a convinience setup to enable network printing automaticall
 You can use this on your own risk:
 
 ```wget https://raw.githubusercontent.com/killajoe/fileserver/main/Convenience-printer-installation  &&  chmod +x Convenience-printer-installation && ./Convenience-printer-installation```
+
+Possible to use this on the installer from welcome too:
+![2023-07-18_16-06](https://github.com/killajoe/fileserver/assets/16797647/6824a2e8-0793-4be5-abc8-9c754201988c)
+pressing the button right bottom "Fetch your install custumazatiuon file (advanced)"  and pasthe the raw script url into the popup field.. 
+
+```https://raw.githubusercontent.com/killajoe/fileserver/main/Convenience-printer-installation```
