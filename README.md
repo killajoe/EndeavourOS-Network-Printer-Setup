@@ -15,3 +15,7 @@ Possible to use this on the installer from welcome too:
 pressing the button right bottom "Fetch your install custumazatiuon file (advanced)"  and pasthe the raw script url into the popup field.. 
 
 ```https://raw.githubusercontent.com/killajoe/fileserver/main/Convenience-printer-installation```
+
+For this to work you will need to choose printing support (Cups) in Packages screen (only available for online install methods):
+![2023-07-18_16-20](https://github.com/killajoe/fileserver/assets/16797647/cd6d985c-ae7d-4d56-a995-a6fc124908a3)
+
