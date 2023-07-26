@@ -1,6 +1,4 @@
-# fileserver
-to serve files
-development needs
+# Printer Network Easy setup script
 
 currently working on a convinience setup to enable network printing automatically:
 
