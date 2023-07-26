@@ -1,4 +1,4 @@
-# Printer Network Easy setup script
+# EndesavourOS Network Printing Setup:
 
 currently working on a convinience setup to enable network printing automatically:
 
