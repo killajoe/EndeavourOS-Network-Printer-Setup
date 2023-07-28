@@ -1,6 +1,6 @@
 #!/bin/bash
-git clone https://github.com/killajoe/fileserver.git
-cd fileserver
+git clone https://github.com/killajoe/EndeavourOS-Network-Printer-Setup.git
+cd EndeavourOS-Network-Printer-Setup
 
 ## start script ##
 systemctl enable cups-browsed.service
@@ -16,4 +16,4 @@ patch /etc/nsswitch.conf < nsswitch.conf.patch
 
 # cleanup
 cd .. 
-rm -R fileserver
+rm -R EndeavourOS-Network-Printer-Setup
