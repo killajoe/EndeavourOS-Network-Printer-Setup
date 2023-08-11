@@ -1,0 +1,11 @@
+--- firewalld.conf	2023-06-18 15:18:48.752549289 +0200
++++ firewalld.conf.patched	2023-06-18 15:21:39.147660034 +0200
+@@ -3,7 +3,7 @@
+ # default zone
+ # The default zone used if an empty zone string is used.
+ # Default: public
+-DefaultZone=public
++DefaultZone=network-printer
+ 
+ # Clean up on exit
+ # If set to no or false the firewall configuration will not get cleaned up
