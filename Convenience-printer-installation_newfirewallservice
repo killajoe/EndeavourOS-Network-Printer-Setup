@@ -8,7 +8,7 @@ systemctl enable cups-browsed.service
 cp /usr/lib/firewalld/zones/home.xml /etc/firewalld/zones/network-printer.xml
 patch /etc/firewalld/zones/network-printer.xml < network-printer.xml.patch
 # enable home as default zone
-patch /etc/firewalld/firewalld-new.conf < firewalld.conf.patch
+patch /etc/firewalld/firewalld.conf < firewalld-new.conf.patch
 # enable local hostname resolution
 patch /etc/nsswitch.conf < nsswitch.conf.patch
 ## end script ##
