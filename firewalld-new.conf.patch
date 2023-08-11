@@ -1,5 +1,5 @@
---- firewalld.conf	2023-06-18 15:18:48.752549289 +0200
-+++ firewalld.conf.patched	2023-06-18 15:21:39.147660034 +0200
+--- firewalld.conf	2023-08-11 10:31:09.376627571 +0200
++++ firewalld-new.conf.patched	2023-08-11 10:35:24.127673766 +0200
 @@ -3,7 +3,7 @@
  # default zone
  # The default zone used if an empty zone string is used.
