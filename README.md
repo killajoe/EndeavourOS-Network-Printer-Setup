@@ -5,7 +5,7 @@ currently working on a convinience setup to enable network printing automaticall
 ![2023-08-11_11-39](https://github.com/killajoe/EndeavourOS-Network-Printer-Setup/assets/16797647/a6d1a4ce-2785-4695-85f3-62c85c52f855)
 
 
-The script will create a new firewalld zone called network-printer.xml.
+The script will create a new firewalld zone called **network-printer**.
 
 This service uses the same set as home preset with:
 **ssh mdns samba-client dhcpv6-client**
