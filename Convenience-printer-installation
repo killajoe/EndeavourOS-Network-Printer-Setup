@@ -5,9 +5,9 @@ cd EndeavourOS-Network-Printer-Setup
 ## start script ##
 systemctl enable cups-browsed.service
 # creating a zone dropin
-cp network-printer.xml "/etc/firewalld/zones/"
+#cp network-printer.xml "/etc/firewalld/zones/"
 # enable home as default zone
-patch "/etc/firewalld/firewalld.conf" < firewalld-new.conf.patch
+#patch "/etc/firewalld/firewalld.conf" < firewalld-new.conf.patch
 # enable local hostname resolution
 patch "/etc/nsswitch.conf" < nsswitch.conf.patch
 ## end script ##
